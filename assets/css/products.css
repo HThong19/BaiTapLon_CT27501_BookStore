@@ -1,0 +1,31 @@
+.book-cover {
+  object-fit: cover;
+  aspect-ratio: 2/3;
+  width: 100%;
+}
+
+.btn-custom {
+  background-color: #1058ff;
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 10px 0;
+}
+
+.btn-custom:hover {
+  background-color: #0007d1;
+  color: white;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.price-new {
+  font-weight: bold;
+  color: #333;
+}
