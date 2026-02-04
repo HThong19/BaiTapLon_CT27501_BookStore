@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Chi tiết sản phẩm - ABC Book Store</title>
+  </head>
+  <body>
+    <header>
+      <div class="text-center py-2 small fs-md-6 bg-info text-light">
+        Open Books. Open Minds
+      </div>
+      <div class="container-fluid px-lg-5 px-md-3 py-3 py-lg-4">
+        <div class="row align-items-center g-3">
+          <a
+            class="col-5 col-lg-3 order-1 navbar-brand text-decoration-none small"
+            href="/index.html"
+          >
+            <img
+              src="./assets/images/logo/wizard.svg"
+              alt="logo image"
+              width="15%"
+              style="filter: brightness(0) invert(0)"
+            />
+            ABCBOOKSTORE.COM
+          </a>
+          <nav class="col-7 col-lg-4 order-2 order-lg-3">
+            <ul class="list-unstyled d-flex justify-content-end gap-3 mb-0">
+              <li>
+                <a
+                  href="./login.html"
+                  class="btn btn-sm btn-outline-primary px-lg-3 rounded-pill small"
+                  >Đăng nhập</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./signup.html"
+                  class="btn btn-sm btn-outline-primary px-lg-3 rounded-pill small"
+                  >Đăng ký</a
+                >
+              </li>
+              <li class="ms-lg-2">
+                <a href="./cart.html" class="nav-link"
+                  ><i class="fa-solid fa-bag-shopping"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <form
+            class="col-12 col-lg-5 order-3 order-lg-2 d-flex align-items-center rounded-pill border bg-light px-3 py-1"
+            action=""
+            method="GET"
+          >
+            <input
+              class="form-control border-0 bg-transparent shadow-none"
+              type="search"
+              name="keywords"
+              placeholder="Tìm sách, tác giả"
+            />
+            <button class="btn p-0" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <nav class="container mt-4 mb-4">
+        <div class="d-flex justify-content-lg-center overflow-x-auto">
+          <ul
+            class="nav nav-pills flex-nowrap bg-light rounded-pill p-1 gap-lg-5"
+          >
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link text-nowrap px-3"
+                >Trang chủ</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link link-secondary text-nowrap px-3"
+                >Sách mới</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link link-secondary text-nowrap px-3"
+                >Best sellers</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link link-secondary text-nowrap px-3"
+                >Trẻ em</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link link-secondary text-nowrap px-3"
+                >Thể loại</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                href="./products.html"
+                class="nav-link link-secondary text-nowrap px-3"
+                >Sản phẩm</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container px-lg-5 py-lg-5">
+        <div class="row g-3">
+          <div class="col-12 col-lg-5 d-flex justify-content-center">
+            <img
+              class="img-fluid border"
+              src="./assets/images/best-cookbooks/Athens.webp"
+              alt="Athens"
+            />
+          </div>
+          <div class="col-12 col-lg-7">
+            <h1 class="display-6 fw-bold text-dark">Athens</h1>
+            <h3 class="h5 fw-normal text-secondary mb-3">
+              Food, Stories, Love: A Cookbook
+            </h3>
+            <div class="mb-4">
+              Tác giả:
+              <span class="text-primary fw-bold">Diane Kochilas</span>
+            </div>
+            <div class="mb-4">
+              <h5 class="fw-bold border-bottom pb-2">Mô tả sản phẩm</h5>
+              <p class="text-secondary text-justify">
+                Cuốn sách là hành trình ẩm thực tuyệt vời đưa bạn đến với
+                Athens. Không chỉ là các công thức nấu ăn, Diane Kochilas còn kể
+                những câu chuyện về lịch sử, văn hóa và tình yêu dành cho thành
+                phố này. Từ những món ăn đường phố giản dị đến những bữa tiệc
+                sang trọng, mọi thứ đều được tái hiện sống động qua từng trang
+                sách.
+              </p>
+            </div>
+            <div class="card border-0 mb-4">
+              <div class="card-body">
+                <h5 class="fw-bold mb-3">
+                  <i class="fa-solid fa-circle-info me-2 text-primary"></i>Thông
+                  tin chi tiết
+                </h5>
+                <table class="table table-borderless table-sm m-0">
+                  <tbody>
+                    <tr>
+                      <td class="text-secondary w-25">Nhà xuất bản:</td>
+                      <td class="fw-medium">Rizzoli (24/09/2024)</td>
+                    </tr>
+                    <tr>
+                      <td class="text-secondary">Ngôn ngữ:</td>
+                      <td class="fw-medium">Tiếng Anh</td>
+                    </tr>
+                    <tr>
+                      <td class="text-secondary">Số trang:</td>
+                      <td class="fw-medium">324 trang</td>
+                    </tr>
+                    <tr>
+                      <td class="text-secondary">Trọng lượng:</td>
+                      <td class="fw-medium">1.2 kg</td>
+                    </tr>
+                    <tr>
+                      <td class="text-secondary">Kích thước:</td>
+                      <td class="fw-medium">20 x 3 x 25 cm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-lg fw-bold">
+              <i class="fa-solid fa-cart-shopping me-2"></i> THÊM VÀO GIỎ
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light py-5 mt-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <a
+              href="/index.html"
+              class="text-decoration-none text-light d-flex align-items-center gap-2 mb-3"
+            >
+              <img
+                src="./assets/images/logo/wizard.svg"
+                alt="ABC Bookstore Logo"
+                width="40"
+                style="filter: brightness(0) invert(1)"
+              />
+              <span class="fs-4 fw-bold">ABCbookstore.com</span>
+            </a>
+            <p class="text-white-50 small mb-4">
+              Open Books. Open Minds.<br />
+              Nâng niu tri thức Việt
+            </p>
+            <div class="d-flex gap-4">
+              <a href="#" class="link-light text-decoration-none fs-6"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="link-light text-decoration-none fs-6"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="link-light text-decoration-none fs-6"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" class="link-light text-decoration-none fs-6"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h5 class="fw-bold mb-3 text-white">Hỗ trợ</h5>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Trung tâm trợ giúp</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Chính sách vận chuyển</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Phương thức thanh toán</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 col-lg-2">
+            <h5 class="fw-bold mb-3 text-white">Khám phá</h5>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Sách bán chạy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Sách mới phát hành</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Sách thiếu nhi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Góc tác giả</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <h5 class="fw-bold mb-3 text-white">Đăng ký nhận tin</h5>
+            <p class="text-white-50 small">
+              Nhận thông tin sách mới và khuyến mãi đặc biệt mỗi tuần.
+            </p>
+            <form action="" class="mb-3">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control focus-ring focus-ring-light border-0"
+                  placeholder="Email của bạn..."
+                  aria-label="Email của bạn"
+                />
+                <button class="btn btn-primary" type="button">
+                  <i class="fa-solid fa-paper-plane text-dark"></i>
+                </button>
+              </div>
+            </form>
+            <div class="text-white-50 small">
+              <p class="mb-1">
+                <i class="fa-solid fa-envelope me-2"></i>
+                support@abcbookstore.com
+              </p>
+              <p class="mb-0">
+                <i class="fa-solid fa-phone me-2"></i> 0123 456 789
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-secondary my-4" />
+
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+            <p class="text-white-50 small mb-0">
+              &copy; 2025 ABC Bookstore. All rights reserved.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <i class="fa-brands fa-cc-visa text-white-50 fs-4 me-2"></i>
+            <i class="fa-brands fa-cc-mastercard text-white-50 fs-4 me-2"></i>
+            <i class="fa-brands fa-cc-paypal text-white-50 fs-4"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
