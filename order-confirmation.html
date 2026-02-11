@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xác nhận đơn hàng - ABC Bookstore</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <header class="py-3 mb-4 border-bottom bg-white shadow-sm">
+      <div class="row align-items-center g-3">
+        <a
+          class="col-5 col-lg-3 order-1 navbar-brand text-decoration-none small"
+          href="./index.html"
+        >
+          <img
+            src="./assets/images/logo/wizard.svg"
+            alt="logo image"
+            width="15%"
+            style="filter: brightness(0) invert(0)"
+          />
+          ABCBOOKSTORE.COM
+        </a>
+        
+      </div>
+    </header>
+    <main>
+      <div class="container pb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="text-center mb-4">
+              <div id="status-icon" class="display-1 text-success mb-3">
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <h2 id="status-title" class="fw-bold">Đặt hàng thành công!</h2>
+              <p class="text-muted">
+                Mã đơn hàng:
+                <span id="display-order-id" class="fw-bold text-dark"
+                  >#ABC-100226</span
+                >
+              </p>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+              <div
+                id="card-header-payment"
+                class="card-header bg-primary text-white text-center py-3 border-0"
+              >
+                <h6 class="mb-0 fw-bold text-uppercase">
+                  Thông tin thanh toán
+                </h6>
+              </div>
+              <div class="card-body p-4 text-center">
+                <div id="section-bank" class="payment-section d-none">
+                  <p class="mb-3 small">
+                    Vui lòng quét mã VietQR để thanh toán
+                  </p>
+                  <div class="bg-white p-2 d-inline-block border rounded mb-3">
+                    <img
+                      id="qr-bank-img"
+                      src=""
+                      alt="VietQR"
+                      class="img-fluid"
+                      style="max-width: 250px"
+                    />
+                  </div>
+                  <div
+                    class="text-start bg-light p-3 rounded-3 small mx-auto"
+                    style="max-width: 350px"
+                  >
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-muted">Chủ TK:</span>
+                      <span class="fw-bold">ABC BOOKSTORE</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-muted">Số TK:</span>
+                      <span class="fw-bold">0123456789</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span class="text-muted">Ngân hàng:</span>
+                      <span class="fw-bold text-primary">Vietcombank</span>
+                    </div>
+                    <hr class="my-2" />
+                    <div
+                      class="d-flex justify-content-between text-danger fw-bold"
+                    >
+                      <span>Tổng tiền:</span> <span id="bank-total">0đ</span>
+                    </div>
+                  </div>
+                  <button
+                    onclick="confirmPaid()"
+                    class="btn btn-success mt-4 w-100 fw-bold"
+                  >
+                    Tôi đã chuyển khoản thành công
+                  </button>
+                </div>
+
+                <div id="section-momo" class="payment-section d-none">
+                  <p class="mb-3 small text-primary fw-bold">
+                    Thanh toán qua Ví MoMo
+                  </p>
+                  <div class="bg-white p-2 d-inline-block border rounded mb-3">
+                    <img
+                      id="qr-momo-img"
+                      src=""
+                      alt="MoMo QR"
+                      class="img-fluid"
+                      style="max-width: 250px"
+                    />
+                  </div>
+                  <p class="small text-muted mb-0">
+                    Hệ thống sẽ tự động xác nhận sau khi quét
+                  </p>
+                  <button
+                    onclick="confirmPaid()"
+                    class="btn btn-primary mt-4 w-100 fw-bold"
+                    style="background-color: #a50064; border: none"
+                  >
+                    Đã thanh toán qua MoMo
+                  </button>
+                </div>
+
+                <div id="section-cod" class="payment-section d-none py-4">
+                  <div class="display-4 text-primary mb-3">
+                    <i class="fas fa-truck-fast"></i>
+                  </div>
+                  <h5>Thanh toán khi nhận hàng (COD)</h5>
+                  <p class="text-muted small">
+                    Đơn hàng của bạn sẽ được xử lý ngay. Bạn vui lòng chuẩn bị
+                    số tiền mặt
+                    <strong id="cod-total" class="text-dark">0đ</strong> khi
+                    shipper liên hệ.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card border-0 shadow-sm p-4 mb-4">
+              <h6
+                class="fw-bold mb-3 border-bottom pb-2 text-muted small text-uppercase"
+              >
+                Địa chỉ giao hàng
+              </h6>
+              <p class="mb-1 fw-bold" id="customer-name text-dark">
+                Nguyễn Văn A · 090 123 4567
+              </p>
+              <p class="text-muted small mb-0">
+                123 Đường Sách, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+              </p>
+            </div>
+
+            <div class="row g-2">
+              <div class="col-6">
+                <a
+                  href="index.html"
+                  class="btn btn-outline-secondary w-100 fw-bold"
+                  >Quay về trang chủ</a
+                >
+              </div>
+              <div class="col-6">
+                <button class="btn btn-primary w-100 fw-bold">
+                  Theo dõi đơn hàng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Lấy thông tin từ URL
+        const params = new URLSearchParams(window.location.search);
+        const method = params.get("method") || "cod";
+        const amount = parseInt(params.get("amount")) || 560000; // Mặc định 560k nếu ko có
+        const orderId = "ABC" + Math.floor(Math.random() * 900000 + 100000); // Tạo mã đơn hàng ngẫu nhiên
+
+        // 2. Cập nhật thông tin hiển thị cơ bản
+        document.getElementById("display-order-id").innerText = "#" + orderId;
+        document.getElementById("bank-total").innerText =
+          amount.toLocaleString("vi-VN") + "đ";
+        document.getElementById("cod-total").innerText =
+          amount.toLocaleString("vi-VN") + "đ";
+
+        // 3. Ẩn/Hiện Section dựa trên Method
+        document
+          .querySelectorAll(".payment-section")
+          .forEach((el) => el.classList.add("d-none"));
+
+        if (method === "bank") {
+          document.getElementById("section-bank").classList.remove("d-none");
+          setWaitingStatus("Đang chờ thanh toán chuyển khoản");
+
+          // Tạo QR VietQR (Ngân hàng VCB, STK 0123456789)
+          const vietQRUrl = `https://img.vietqr.io/image/VCB-0123456789-compact.png?amount=${amount}&addInfo=${orderId}&accountName=ABC%20BOOKSTORE`;
+          document.getElementById("qr-bank-img").src = vietQRUrl;
+        } else if (method === "momo") {
+          document.getElementById("section-momo").classList.remove("d-none");
+          setWaitingStatus("Đang chờ thanh toán MoMo");
+
+          // Tạo QR MoMo giả lập (Dùng mã QR chứa thông tin)
+          const momoData = `2|99|0901234567|ABC BOOKSTORE||0|0|${amount}|${orderId}|transfer_myqr`;
+          const qrMomoUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(momoData)}`;
+          document.getElementById("qr-momo-img").src = qrMomoUrl;
+        } else {
+          document.getElementById("section-cod").classList.remove("d-none");
+          // COD thì giữ nguyên màu xanh thành công
+        }
+      });
+
+      function setWaitingStatus(text) {
+        const title = document.getElementById("status-title");
+        const icon = document.getElementById("status-icon");
+        const header = document.getElementById("card-header-payment");
+
+        title.innerText = text;
+        title.className = "fw-bold text-warning";
+        icon.className = "display-1 text-warning mb-3";
+        icon.innerHTML = '<i class="fas fa-clock"></i>';
+        header.className =
+          "card-header bg-warning text-dark text-center py-3 border-0";
+      }
+
+      function confirmPaid() {
+        alert(
+          "Hệ thống đã ghi nhận thông báo của bạn. Chúng tôi sẽ kiểm tra và xác nhận đơn hàng sớm nhất!",
+        );
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
